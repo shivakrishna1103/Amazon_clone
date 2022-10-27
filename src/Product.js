@@ -1,20 +1,22 @@
 import React from 'react'
 
-export const Product = () => {
+export const Product = ({id,image,title,rating,price}) => {
   return (
     <div className='product '>
         <div className='product_info'>
-            <p>The learn Startup</p>
+            <p>{title}</p>
             <p className='product-price'>
-                <small>$</small>
-                <strong>19.23</strong>
+                <small>Price : $</small>
+                <strong>{price}</strong>
             </p>
             <div className='product_rating'>
-               <p>&#11088;</p>
-               <p>&#11088;</p>
-               <p>&#11088;</p>
+              {Array(rating).fill().map(( _ , i )=>(
+                <p key={i}>&#11088;</p>
+              ))}
             </div>
         </div>
+        <img src={image} alt=" "></img>
+        <button>Add To Cart</button>
     </div>
   )
 }
