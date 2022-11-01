@@ -1,5 +1,5 @@
 import React from "react";
-import { Product } from "./Product";
+import Product from './Product'
 
 const Home = ({ props }) => {
   return (
@@ -38,7 +38,7 @@ const Home = ({ props }) => {
           <Product
             id="12346"
             title="
-          Orient Electric Aeroslim 1200mm BLDC motor Smart Ceiling Fan with IOT, Remote & Under light (Brown)"
+          Orient Electric Aeroslim 1200mm "
             price={124.05}
             rating={5}
             image="https://m.media-amazon.com/images/I/61-uENP7abL._SL1500_.jpg "
@@ -46,14 +46,15 @@ const Home = ({ props }) => {
           <Product
             id="12347"
             title="
-           AmazonBasics 564 L Inverter Frost-Free Side-by-Side Refrigerator with Water Dispenser (2022, Auto Defrost, Multi Airflow, Silver Steel) "
+           AmazonBasics 564 L Refrigerator  "
             price={690.84}
             rating={4}
             image="https://m.media-amazon.com/images/I/41rQ96NJTlL._SL1500_.jpg"
           />
+          
         </div>
         <div className="home__row">
-          <Product />
+          <Product id='12348' title=" boAt Airdopes 141 " price={ 16.35 } rating={ 4 } image="  https://m.media-amazon.com/images/I/51tFAbNRaPL._SL1500_.jpg"/>
           
         </div>
       </div>
