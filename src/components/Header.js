@@ -1,4 +1,4 @@
-// import React, { useEffect } from "react";
+ import {React }from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
@@ -7,7 +7,7 @@ import { useStateValue } from "./DataLayer/stateProvider";
 
 const Header = () => {
 
- const [{basket},dispatch] = useStateValue( ' ' );
+ const [{basket}] = useStateValue(  );
   
   return (
     <div className="header">

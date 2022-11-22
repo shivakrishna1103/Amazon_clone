@@ -5,10 +5,10 @@ export const initialState = {
 
 //selector
 export const getBasketTotal= (basket)=>
-basket?.reduce((amount,item)=> item.price+amount , 0);
+basket?.reduce((total_amount,item)=> total_amount+item.price , 0);
 
 const reducer=( state=initialState , action ) => {
-    console.log(action);
+   // console.log(action);
     switch(action.type) {
         case 'ADD_TO_BASKET' :
             return {
@@ -19,8 +19,8 @@ const reducer=( state=initialState , action ) => {
             case 'REMOVE_FROM_BASKET' :
                 return{
                     ...state,
-                    basket:[...state.basket , action.item],
-                }
+                    basket:[ ],
+                };
             default:
                 return state ;
     }

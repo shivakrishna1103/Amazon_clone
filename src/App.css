@@ -140,7 +140,7 @@ margin-right: 5px;
     display: flex;
     padding: 20px;
     background-color: white;
-    height:max-content
+    height:max-content;
 }
 .checkout__ads {
     width: 100%;

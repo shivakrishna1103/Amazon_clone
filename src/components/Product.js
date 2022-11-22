@@ -18,10 +18,10 @@ dispatch(
         rating:"rating",
         image:'image',
         price:'price'
-      }
+      },
     } 
-)
-}
+);
+};
 
 
   return (

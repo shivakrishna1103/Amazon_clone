@@ -4,29 +4,33 @@ import { getBasketTotal } from './DataLayer/reducer';
 import { useStateValue } from './DataLayer/stateProvider';
 
 
-function Subtotal() {
-  const [{basket},dispatch] = useStateValue( );
+function Subtotal( ) {
+const [{basket}]= useStateValue();
 
   return (
     <div className='subtotal'>
 
-      <CurrencyFormat  renderText={( value )=> (
-        <>
-        <p>
-            Subtotal ( {basket.length} items) :<strong>{value}</strong>
+     <CurrencyFormat 
+       renderText={( value )=> (
+        <div>
+           <p>
+            Subtotal( {basket.length} items) :<strong>{value}</strong>
         </p>
         <small className='subtotal__gift'>
             <input type="checkbox" />This order contains a gift
         </small>
-        </>
+        </div>
       )}
       decimalScale={2}
-      value={getBasketTotal(basket)}
+      value={getBasketTotal(basket)} 
       displayType={'text'}
       thousandSeparator = {true}
       prefix={ ' $ ' }
       >
       </CurrencyFormat>
+
+      
+
       <button>Proceed to Checkout</button>
     </div>
   )
