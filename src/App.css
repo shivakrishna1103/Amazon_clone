@@ -10,9 +10,8 @@
 .header_logo {
  width:100px;
 object-fit:contain ;
-margin:0px 20px;
-margin: top 0px 18px;
-
+margin: 20px;
+margin-top :18px;
 }
 .header_search{
     display: flex;

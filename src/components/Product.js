@@ -1,20 +1,27 @@
 import React from 'react'
-import {useStateValue} from './StateProvider' 
+import { useStateValue } from './DataLayer/stateProvider' 
+
+
 const Product = ( {id,title,image,price,rating}) => {
-const [state , dispatch] =useStateValue( );
-console.log("this is the basket >>>")
-  const addToBasket =( ) => {
-   dispatch({
-    type:"ADD_TO_BASKET",
-    item:{
-      id:id,
-      title:title,
-      image:image,
-      price:price,
-      rating:rating
-    },
-   })
-  }
+
+const [ {basket} , dispatch ] =useStateValue( ' ' );
+
+
+const addToBasket= ()=>{
+  console.log("this is from the cart basket");
+dispatch(
+    {
+      type:"ADD_TO_BASKET",
+        item:{
+        id:'id',
+        title:"title",
+        rating:"rating",
+        image:'image',
+        price:'price'
+      }
+    } 
+)
+}
 
 
   return (
@@ -32,9 +39,10 @@ console.log("this is the basket >>>")
         </div>
       </div>
       <img src={image} alt=""></img>
-      <button onClick={addToBasket}>Add Cart</button>
+      <button type='button' onClick={addToBasket}>Add To Cart</button>
     </div>
   )
 }
 
-export default Product
+
+export default Product;
