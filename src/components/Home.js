@@ -1,7 +1,7 @@
 import React from "react";
 import Product from './Product'
 
-const Home = ({ props }) => {
+const Home = () => {
   return (
     <div className="home">
       <div className="home_container">

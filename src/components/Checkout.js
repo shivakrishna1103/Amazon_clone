@@ -3,7 +3,7 @@ import CheckoutProduct from "./CheckoutProduct";
 import { useStateValue } from "./DataLayer/stateProvider";
 import Subtotal from "./Subtotal";
 function Checkout({ props }) {
-  const [{ basket }] = useStateValue();
+  const [{ basket },dispatch] = useStateValue(' ');
 
   return (
     <div className="checkout">

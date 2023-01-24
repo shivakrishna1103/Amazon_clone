@@ -5,7 +5,7 @@ import { useStateValue } from './DataLayer/stateProvider';
 
 
 function Subtotal( ) {
-const [{basket}]= useStateValue();
+const [basket,dispatch]= useStateValue( ' ' );
 
   return (
     <div className='subtotal'>
@@ -14,7 +14,7 @@ const [{basket}]= useStateValue();
        renderText={( value )=> (
         <div>
            <p>
-            Subtotal( {basket.length} items) :<strong>{value}</strong>
+            Subtotal( {basket.length} items) : <strong>{value}</strong>
         </p>
         <small className='subtotal__gift'>
             <input type="checkbox" />This order contains a gift
@@ -22,7 +22,7 @@ const [{basket}]= useStateValue();
         </div>
       )}
       decimalScale={2}
-      value={getBasketTotal(basket)} 
+      value={getBasketTotal(basket)}
       displayType={'text'}
       thousandSeparator = {true}
       prefix={ ' $ ' }

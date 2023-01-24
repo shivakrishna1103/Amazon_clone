@@ -1,5 +1,5 @@
 import React from 'react';
-function CheckoutProduct({id , image , title , price ,rating}) {
+function CheckoutProduct({id ,image, title , price ,rating}) {
   return (
     <div className='checkoutProduct'>
         
@@ -15,7 +15,7 @@ function CheckoutProduct({id , image , title , price ,rating}) {
         </div>
         <div className='checkoutProduct_rting'>
             {Array(rating)
-            .fill()
+            .fill( )
             .map(( _ , i )=>{
                 <p>&#127775;</p>
             })}
@@ -25,4 +25,4 @@ function CheckoutProduct({id , image , title , price ,rating}) {
   )
 }
 
-export default CheckoutProduct
+export default CheckoutProduct ;

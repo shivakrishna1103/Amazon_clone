@@ -7,7 +7,7 @@ import { useStateValue } from "./DataLayer/stateProvider";
 
 const Header = () => {
 
- const [{basket}] = useStateValue(  );
+ const [{basket},dispatch] = useStateValue( ' ' );
   
   return (
     <div className="header">

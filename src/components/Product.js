@@ -12,13 +12,13 @@ const addToBasket= ()=>{
 dispatch(
     {
       type:"ADD_TO_BASKET",
-        item:[{
-        id:'id',
+        item:{
+        id:"id",
         title:"title",
         rating:"rating",
-        image:'image',
+        image:"image",
         price:"price",
-      }],
+      },
     } 
 );
 };
