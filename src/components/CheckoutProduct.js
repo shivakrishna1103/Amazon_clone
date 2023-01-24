@@ -2,8 +2,8 @@ import React from 'react';
 function CheckoutProduct({id , image , title , price ,rating}) {
   return (
     <div className='checkoutProduct'>
-        <h1>product Details</h1>
-        {/* <img className='checkoutProduct_image' src={image}/>
+        
+    <img className='checkoutProduct_image' src={image}/>
 
         <div className='checkoutProduct_info'>
             <p className='checkoutProduct_title'>{title}</p>
@@ -20,9 +20,8 @@ function CheckoutProduct({id , image , title , price ,rating}) {
                 <p>&#127775;</p>
             })}
         </div>
-        <button type="button" onClick={console.log("removed from the basket")}>Remove From Basket</button> */}
-     </div>
-    
+        <button type="button" onClick={console.log("removed from the basket")}>Remove From Basket</button>
+    </div>
   )
 }
 
