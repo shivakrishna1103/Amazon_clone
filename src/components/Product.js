@@ -13,11 +13,11 @@ dispatch(
     {
       type:"ADD_TO_BASKET",
         item:{
-        id:"id",
-        title:"title",
-        rating:"rating",
-        image:"image",
-        price:"price",
+        id:id,
+        title:title,
+        rating:rating,
+        image:image,
+        price:price,
       },
     } 
 );

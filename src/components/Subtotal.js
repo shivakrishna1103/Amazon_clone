@@ -5,7 +5,7 @@ import { useStateValue } from './DataLayer/stateProvider';
 
 
 function Subtotal( ) {
-const [basket,dispatch]= useStateValue( ' ' );
+const [{basket},dispatch]= useStateValue( ' ' );
 
   return (
     <div className='subtotal'>
