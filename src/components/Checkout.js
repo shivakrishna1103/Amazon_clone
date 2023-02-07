@@ -4,7 +4,7 @@ import { useStateValue } from "./DataLayer/stateProvider";
 import Subtotal from "./Subtotal";
 
 
-function Checkout({ props }) {
+function Checkout() {
   const [{ basket },dispatch] = useStateValue( );
 
   return (
@@ -32,7 +32,6 @@ function Checkout({ props }) {
           
         </div>
       </div>
-
       <div className="checkout__right">
         <Subtotal />
       </div>

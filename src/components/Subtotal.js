@@ -5,7 +5,7 @@ import { useStateValue } from './DataLayer/stateProvider';
 
 
 function Subtotal( ) {
-const [{basket},dispatch]= useStateValue( ' ' );
+const [{basket},dispatch]= useStateValue( );
 
   return (
     <div className='subtotal'>
@@ -28,10 +28,7 @@ const [{basket},dispatch]= useStateValue( ' ' );
       prefix={ ' $ ' }
       >
       </CurrencyFormat>
-
-      
-
-      <button>Proceed to Checkout</button>
+      <button type="button">Proceed to Checkout</button>
     </div>
   )
 }

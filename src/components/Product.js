@@ -1,29 +1,24 @@
 import React from 'react'
-import { useStateValue } from './DataLayer/stateProvider' 
+import { useStateValue } from './DataLayer/stateProvider' ;
 
 
 const Product = ( {id,title,image,price,rating}) => {
 
-const [ {basket} , dispatch ] =useStateValue( ' ' );
+const [ {basket} ,dispatch ] = useStateValue( );
 
-
-const addToBasket= ()=>{
-  console.log("this is from the cart basket");
-dispatch(
-    {
-      type:"ADD_TO_BASKET",
-        item:{
-        id:id,
-        title:title,
-        rating:rating,
-        image:image,
-        price:price,
-      },
-    } 
-);
+const addToBasket = ()=>{
+  console.log("this is fron basket",basket)
+  dispatch({
+    type: 'ADD_TO_BASKET',
+    item:{
+    id:id,
+    title:title,
+    image:image,
+    price:price,
+    rating:rating,
+  },
+  });
 };
-
-
   return (
     <div className='product'>
       <div className='product_info'>
@@ -33,16 +28,18 @@ dispatch(
           <strong>{price}</strong>
         </p>
         <div className='product_rating'>
-          {Array(rating).fill().map( ( _ , i )=>(
-            <p key={i}>&#127775;</p>
+          {Array(rating)
+          .fill()
+          .map( ( _ , i )=>(
+            <p key={i} >🌟</p>
           ))}
         </div>
       </div>
       <img src={image} alt=""></img>
-      <button type='button' onClick={addToBasket}>Add To Cart</button>
+      <button onClick={()=>{
+  addToBasket()}}>Add To Cart</button>
     </div>
   )
 }
-
-
 export default Product;
+
