@@ -1,6 +1,14 @@
 import React from "react";
+import { useStateValue } from "./DataLayer/stateProvider";
 
 function CheckoutProduct({ id, image, title, price, rating }) {
+  const [{basket},dispatch] = useStateValue();
+ const removeFromBasket =()=>{
+  dispatch({
+    type:'REMOVE_FROM_BASKET',
+    id:id
+  })
+ }
 
   return (
     <div className="checkoutProduct">
@@ -19,7 +27,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
               return <p key={i}>🌟</p>;
             })}
         </div>
-        <button type="button" >Remove from basket</button>
+        <button  onClick={()=>removeFromBasket()}>Remove from basket</button>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const Product = ( {id,title,image,price,rating}) => {
 const [ {basket} ,dispatch ] = useStateValue( );
 
 const addToBasket = ()=>{
-  console.log("this is fron basket",basket)
+  // console.log("this is from basket",basket)
   dispatch({
     type: 'ADD_TO_BASKET',
     item:{

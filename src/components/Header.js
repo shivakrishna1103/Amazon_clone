@@ -1,4 +1,4 @@
- import {React }from "react";
+import { React } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
@@ -6,9 +6,8 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "./DataLayer/stateProvider";
 
 const Header = () => {
+  const [{ basket }, dispatch] = useStateValue();
 
- const [{basket},dispatch] = useStateValue(  );
-  
   return (
     <div className="header">
       <Link to="/">
@@ -23,6 +22,7 @@ const Header = () => {
         <input className="header_searchInput" type="text" />
         <SearchIcon className="header_searchIcon"></SearchIcon>
       </div>
+
       <div className="header_nav">
         <div className="header_option">
           <span className="header_optionLineOne">Hello</span>
@@ -32,8 +32,9 @@ const Header = () => {
         </div>
 
         <div className="header_option">
+          <Link to="/login">
           <span className="header_optionLineOne"> Hello</span>
-          <span className="header_optionLineTwo">SignIn </span>
+          <span className="header_optionLineTwo">SignIn </span></Link>
         </div>
 
         <div className="header_option">
@@ -46,10 +47,12 @@ const Header = () => {
           <span className="header_optionLineTwo">Prime </span>
         </div>
         <Link to="/Checkout">
-        <div className="header_optionBasket">
-          <ShoppingBasketIcon />
-           <span className="header_optionTwo header_basketCount">{basket?.length}</span>
-        </div>
+          <div className="header_optionBasket">
+            <ShoppingBasketIcon />
+            <span className="header_optionTwo header_basketCount">
+              {basket?.length}
+            </span>
+          </div>
         </Link>
       </div>
     </div>
