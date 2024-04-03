@@ -8,7 +8,7 @@
    
 }
 .header_logo {
- width:100px;
+ width: 100px;
 object-fit:contain ;
 margin: 20px;
 margin-top :18px;
@@ -257,7 +257,7 @@ object-fit: contain;
     background: #f0c14b;
     align-items: center;
     border-radius: 2px;
-    width: 100%;
+    width: 40%;
     padding: 5px;
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;

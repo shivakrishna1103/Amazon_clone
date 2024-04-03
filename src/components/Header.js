@@ -13,7 +13,7 @@ const Header = () => {
       <Link to="/">
         <img
           className="header_logo"
-          src="https://pnggrid.com/wp-content/uploads/2021/05/Amazon-Logo-1024x426.png"
+          src="./assets/svgIcons/Amazon-Logo-1024x426.png"
           alt=" "
         ></img>
       </Link>

@@ -1,5 +1,5 @@
 import React from "react";
-import Product from './Product'
+import Product from "./Product";
 
 const Home = () => {
   return (
@@ -51,11 +51,15 @@ const Home = () => {
             rating={4}
             image="https://m.media-amazon.com/images/I/41rQ96NJTlL._SL1500_.jpg"
           />
-          
         </div>
         <div className="home__row">
-          <Product id='12348' title=" boAt Airdopes 141 " price={ 16.35 } rating={ 4 } image="  https://m.media-amazon.com/images/I/51tFAbNRaPL._SL1500_.jpg"/>
-          
+          <Product
+            id="12348"
+            title=" boAt Airdopes 141 "
+            price={16.35}
+            rating={4}
+            image="  https://m.media-amazon.com/images/I/51tFAbNRaPL._SL1500_.jpg"
+          />
         </div>
       </div>
     </div>
